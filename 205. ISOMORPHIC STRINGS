@@ -1,0 +1,12 @@
+bool isIsomorphic(char* s, char* t) {
+    int poss[256]={0};
+    int post[256]={0};
+    for(int i=0;s[i] != '\0' && t[i] !='\0';i++){
+        if(poss[(unsigned char)s[i]] != post[(unsigned int)t[i]]){
+            return false;
+        }
+        poss[(unsigned int)s[i]]=i+1;
+        post[(unsigned int)t[i]]=i+1;
+    }
+    return true;
+}
