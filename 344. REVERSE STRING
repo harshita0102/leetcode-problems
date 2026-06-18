@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void reverseString(char* c, int cSize) {
+    int left = 0, right = cSize - 1;
+    char temp;
+
+    while (left < right) {
+         teAmp = c[left];
+        c[left] = c[right];
+        c[right] = temp;
+        left++;
+        right--;
+    }
+}
+
